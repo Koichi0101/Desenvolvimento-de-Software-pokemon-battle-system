@@ -600,24 +600,16 @@ public class TypeChart {
 
     private static void addEffectiveness(MoveType attackType, MoveType targetType, double multiplier) {
 
-        chart.putIfAbsent(
-                attackType,
-                new HashMap<>()
-        );
+        chart.putIfAbsent(attackType,new HashMap<>());
 
-        chart.get(attackType).put(
-                targetType,
-                multiplier
-        );
+        chart.get(attackType).put(targetType,multiplier);
     }
 
     public static double getMultiplier(MoveType attackType, MoveType targetType) {
 
         if (chart.containsKey(attackType)&&chart.get(attackType).containsKey(targetType)) {
 
-            return chart
-                    .get(attackType)
-                    .get(targetType);
+            return chart.get(attackType).get(targetType);
         }
 
         return 1.0;
