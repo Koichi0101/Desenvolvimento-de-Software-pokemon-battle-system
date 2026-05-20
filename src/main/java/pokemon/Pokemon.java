@@ -6,7 +6,7 @@ import types.TypeChart;
 
 import java.util.ArrayList;
 
-public class Pokemon implements Battleable {
+public abstract class Pokemon implements Battleable {
 
     private final int id;
     private final String name;
@@ -178,7 +178,7 @@ public class Pokemon implements Battleable {
         int finalDamage = damage - defense;
 
         if (finalDamage < 1) {
-            finalDamage = 1;
+            finalDamage = 0;
         }
 
         currentHp -= finalDamage;
@@ -195,7 +195,7 @@ public class Pokemon implements Battleable {
         int finalDamage =damage - spDefense;
 
         if (finalDamage < 1) {
-            finalDamage = 1;
+            finalDamage = 0;
         }
 
         currentHp -= finalDamage;

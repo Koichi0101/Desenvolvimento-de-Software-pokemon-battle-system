@@ -112,9 +112,20 @@ public class BattleMenu {
 
     private void showAllPokemons() {
 
+        System.out.println(
+                "\n===== POKEMON DATABASE ====="
+        );
+
         for (int i = 0; i < PokemonDatabase.POKEMONS.length; i++) {
 
-            Pokemon pokemon = PokemonFactory.createPokemon(i);
+            String data = PokemonDatabase.POKEMONS[i];
+
+            String[] values = data.split(";");
+
+            int pokemonId = Integer.parseInt(values[0]);
+
+            Pokemon pokemon = PokemonFactory.createPokemon(pokemonId);
+
             pokemon.showSummary();
         }
     }
