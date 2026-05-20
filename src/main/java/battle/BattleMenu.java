@@ -95,7 +95,8 @@ public class BattleMenu {
 
                 enemy.addPokemon(PokemonFactory.createPokemon(index));
             }
-        } else {
+        }
+        else {
 
             Random random = new Random();
 
