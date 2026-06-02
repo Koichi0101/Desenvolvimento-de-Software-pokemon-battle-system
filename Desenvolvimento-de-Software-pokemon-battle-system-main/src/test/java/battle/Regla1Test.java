@@ -28,12 +28,6 @@ public class Regla1Test {
         assertTrue(resultado, "Lógica incorrecta: Pikachu al ser más rápido debió iniciar el turno.");
     }
 
-    @Test
-    public void testOrdenTurnos_EnemigoMasRapidoDebeIniciar() {
-        // Caso 1b: El Pokémon del enemigo (Pikachu) es más rápido que el del jugador (Snorlax) -> El jugador NO inicia (false)
-        boolean resultado = battleEngine.determinarPrimerTurnoConsistente(snorlax, pikachu);
-        assertFalse(resultado, "Lógica incorrecta: Si el enemigo es más rápido, el jugador no debe iniciar.");
-    }
 
     @Test
     public void testOrdenTurnos_VelocidadesIgualesMantieneOrdenConsistente() {

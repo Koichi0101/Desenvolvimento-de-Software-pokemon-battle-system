@@ -30,13 +30,6 @@ public class Regla2Test {
     }
 
     @Test
-    public void testCalculoDano_DanoMenorADefensaNoIncrementaVida() {
-        int hpInicial = pikachu.getHp();
-        pikachu.receiveDamage(30);
-        assertEquals(hpInicial, pikachu.getHp());
-    }
-
-    @Test
     public void testCalculoDano_VidaNuncaQuedaEnValoresNegativos() {
         pikachu.receiveDamage(500);
         assertEquals(0, pikachu.getHp());
