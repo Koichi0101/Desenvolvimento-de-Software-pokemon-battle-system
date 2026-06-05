@@ -30,4 +30,4 @@ public class Regla5Test {
 
         assertEquals(hpP2Inicial, p2.getHp(), "El HP de p2 NO debería cambiar si solo p1 recibió daño");
     }
-} // <--- ¡Asegúrate de que esta llave esté aquí!
+} 
